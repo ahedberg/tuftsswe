@@ -15,25 +15,23 @@
 	</head>
 	
 	<body>
-		<!-- Handlebars template -->
-		<script type="text/x-handlebars" data-template-name="main">
-			<!-- Bootstrap container -->
+		<!-- application template - this is displayed on every page -->
+		<script type="text/x-handlebars">
 			<div class="container-fluid local-container">
-			
 				<div class="row">
 					<div class="col-md-12 panel">
 						<img src="static/header.png" class="img-responsive local-header" alt="Tufts SWE Logo"/>
 					</div>
 				</div>
-				
 				<div class="row">
 					<div class="col-md-12 panel">
 						<nav>
 							<ul class="nav nav-pills nav-justified">
-								<li><a href="#">Home</a></li>
-								<li><a href="#">About SWE Tufts</a></li>
+								<li>{{#link-to 'main'}}Home{{/link-to}}</a></li>
+								<li>{{#link-to 'about'}}About SWE Tufts{{/link-to}}</a></li>
 								<li><a href="#">Board Members</a></li>
 								<li><a href="#">Calendar</a></li>
+								<!-- turn this into a model -->
 								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Meeting Minutes <span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="#">September 2014</a></li>
@@ -54,32 +52,59 @@
 						</nav>
 					</div>
 				</div>
-
 				<div class="row">
 					<div class="col-md-12 panel">
 						<section>
-							<h1>Name of page</h1>
-							<p>Sunt autem quidam e nostris, qui haec subtilius velint tradere et negent satis esse, quid bonum sit aut 
-								quid malum, sensu iudicari, sed animo etiam ac ratione intellegi posse et voluptatem ipsam per se esse 
-								expetendam et dolorem ipsum per se esse fugiendum. itaque aiunt hanc quasi naturalem atque insitam in 
-								animis nostris inesse notionem, ut alterum esse appetendum, alterum aspernandum sentiamus. Alii autem, 
-								quibus ego assentior, cum a philosophis compluribus permulta dicantur, cur nec voluptas in bonis sit 
-								numeranda nec in malis dolor, non existimant oportere nimium nos causae confidere, sed et argumentandum et 
-								accurate disserendum et rationibus conquisitis de voluptate et dolore disputandum putant.</p>
-								
-							<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-								totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
-								explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia 
-								consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui 
-								dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
-								incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum 
-								exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem 
-								vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, 
-								qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+							{{outlet}}
 						</section>
 					</div>
 				</div>
 			</div>
+		</script>
+		<!-- home template -->
+		<script type="text/x-handlebars" data-template-name="main">
+			<h1>Name of page</h1>
+			<p>Sunt autem quidam e nostris, qui haec subtilius velint tradere et negent satis esse, quid bonum sit aut 
+				quid malum, sensu iudicari, sed animo etiam ac ratione intellegi posse et voluptatem ipsam per se esse 
+				expetendam et dolorem ipsum per se esse fugiendum. itaque aiunt hanc quasi naturalem atque insitam in 
+				animis nostris inesse notionem, ut alterum esse appetendum, alterum aspernandum sentiamus. Alii autem, 
+				quibus ego assentior, cum a philosophis compluribus permulta dicantur, cur nec voluptas in bonis sit 
+				numeranda nec in malis dolor, non existimant oportere nimium nos causae confidere, sed et argumentandum et 
+				accurate disserendum et rationibus conquisitis de voluptate et dolore disputandum putant.</p>
+				
+			<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+				totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+				explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia 
+				consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui 
+				dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
+				incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum 
+				exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem 
+				vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, 
+				qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+		</script>
+		<!-- about template -->
+		<script type="text/x-handlebars" data-template-name="about">
+			<h1>Name of a different page</h1>
+			<p>Sunt autem quidam e nostris, qui haec subtilius velint tradere et negent satis esse, quid bonum sit aut 
+				quid malum, sensu iudicari, sed animo etiam ac ratione intellegi posse et voluptatem ipsam per se esse 
+				expetendam et dolorem ipsum per se esse fugiendum. itaque aiunt hanc quasi naturalem atque insitam in 
+				animis nostris inesse notionem, ut alterum esse appetendum, alterum aspernandum sentiamus. Alii autem, 
+				quibus ego assentior, cum a philosophis compluribus permulta dicantur, cur nec voluptas in bonis sit 
+				numeranda nec in malis dolor, non existimant oportere nimium nos causae confidere, sed et argumentandum et 
+				accurate disserendum et rationibus conquisitis de voluptate et dolore disputandum putant.</p>
+				
+			<p>Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+				totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
+				explicabo. nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia 
+				consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui 
+				dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora 
+				incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. ut enim ad minima veniam, quis nostrum 
+				exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? quis autem 
+				vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, 
+				qui dolorem eum fugiat, quo voluptas nulla pariatur?</p>
+		</script>
+		<!-- board members template -->
+		<script type="text/x-handlebars" data-template-name="board">
 		</script>
 		<!-- Dependencies -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -89,5 +114,6 @@
 		<!-- Local JS -->
 		<script src="js/application.js"></script>
 		<script src="js/router.js"></script>
+		<script src="js/models.js"></script>
 	</body>
 </html>
