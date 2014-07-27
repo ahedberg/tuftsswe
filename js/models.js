@@ -8,3 +8,9 @@ App.Board = DS.Model.extend({
 	activities: DS.attr('string'),
 	interests: DS.attr('string')
 });
+
+App.Faculty = DS.Model.extend({
+	name: DS.attr('string'),
+	imageUrl: DS.attr('string'),
+	bio: DS.hasMany('paragraph')
+});
