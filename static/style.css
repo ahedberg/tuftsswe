@@ -10,6 +10,11 @@ h1 {
 	text-align: center;
 }
 
+iframe {
+	height: 100%;
+	width: 100%;
+}
+
 .local-container {
 	margin: 1%;
 }

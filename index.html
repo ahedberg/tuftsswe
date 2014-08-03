@@ -36,17 +36,7 @@
 								<!-- TODO add these -->
 								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Meeting Minutes <span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="#">September 2014</a></li>
-										<li class="divider"></li>
-										<li><a href="#">May 2014</a></li>
-										<li><a href="#">April 2014</a></li>
-										<li><a href="#">March 2014</a></li>
-										<li><a href="#">February 2014</a></li>
-										<li><a href="#">January 2014</a></li>
-										<li><a href="#">December 2013</a></li>
-										<li><a href="#">November 2013</a></li>
-										<li><a href="#">October 2013</a></li>
-										<li><a href="#">September 2013</a></li>
+									<!-- TODO -->
 									</ul>
 								</li>
 								<li>{{#link-to 'corporate-relations'}}Corporate Relations{{/link-to}}</li>
@@ -95,10 +85,10 @@
 			
 			<h2>Faculty Advisor: Karen Panetta</h2>
 			<div class="row">
-				<div class="col-md-3">
-					<!-- Karen Panetta's image -->
+				<div class="col-md-2">
+					<img class="img-responsive" src="static/faculty/panetta.png" alt="Karen Panetta" />
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-10">
 					<p>Dr. Karen Panetta is a Fellow of the IEEE. Dr. Panetta received the B.S. in Computer Engineering from Boston University, 
 					and the M.S. and Ph.D. in Electrical Engineering from Northeastern University. She is the Editor-in-Chief of the IEEE Women 
 					in Engineering Magazine. She serves as the 2011 Chair of the IEEE Boston Section. During 2009-2007, she served as the World 
@@ -127,7 +117,7 @@
 			
 			<h2>Faculty Advisor: Ayse Asatekin</h2>
 			<div class="row">
-				<div class="col-md-9">
+				<div class="col-md-10">
 					<p>Ayse Asatekin is an assistant professor in the Chemical and Biological Engineering Department. She received her bachelor's 
 					degrees in chemical engineering (2002) and chemistry (2003) from the Middle East Technical University in Ankara, Turkey. 
 					She went on to receive her Ph.D. in chemical engineering with a concentration in polymer science and technology in 2009 from 
@@ -137,8 +127,8 @@
 					materials for water treatment, small molecule separations, removal of multiple types of pollutants, and energy-efficient smart 
 					filtration processes.</p>
 				</div>
-				<div class="col-md-3">
-					<!-- Ayse Asatein's image -->
+				<div class="col-md-2">
+					<img class="img-responsive" src="static/faculty/asatekin.jpg" alt="Ayse Asatekin" />
 				</div>
 			</div>
 		</script>
@@ -147,13 +137,14 @@
 			<h1>2014-2015 Board Members</h1>
 			{{#each}}
 				<div class="row">
-					<div class="col-md-1">
-						<!-- image --><br />
-						{{position}}
+					<div class="col-md-2">
+						<img class="img-responsive" src={{unbound imageUrl}} alt={{unbound name}} /><br />
 					</div>
-					<div class="col-md-11">
-						<p><b>{{name}}</b><br />
-						Class of {{year}} &#183; {{email}}<br />
+					<div class="col-md-10">
+						<p><b>{{name}}<br /></b>
+						<i>{{position}}</i><br />
+						Class of {{year}}<br />
+						<a href="mailto:{{unbound email}}">{{email}}</a><br />
 						Major: {{major}}<br />
 						{{#if secondMajor}}
 						Second Major: {{secondMajor}}<br />
@@ -176,6 +167,31 @@
 		<!-- corporate relations template TODO add companies we've worked at -->
 		<script type="text/x-handlebars" data-template-name="corporate-relations">
 			<h1>Corporate Relations</h1>
+			<p>Tufts SWE members have interned at a variety of companies both in the greater Boston area and around the country. A selection
+			is listed below, and more company information will be added as it becomes available. If you are interested in working on a 
+			corporate event with Tufts SWE, please use the form at the bottom of this page.</p>
+			
+			<ul>
+				<li><b>AECOM:</b> Maddie Ching</li>
+				<li><b>Allergan Medical:</b> Alana Lustenberger</li>
+				<li><b>AllianceBernstein:</b> Maddie Ching</li>
+				<li><b>CALIBRE:</b> Amanda Baker</li>
+				<li><b>Church &amp; Dwight:</b> Emily Pressman</li>
+				<li><b>EdgeConneX:</b> Amanda Baker</li>
+				<li><b>Einstein's Workshop:</b> Sarah Vivinetto</li>
+				<li><b>Federal Highway Administration:</b> Daniella DiPaola</li>
+				<li><b>Google:</b> Ashley Hedberg</li>
+				<li><b>iD Tech Camps:</b> Trish O'Connor</li>
+				<li><b>ioMosaic Corp.:</b> Emily Pressman</li>
+				<li><b>ITV Studios:</b> Kyra Gardiner</li>
+				<li><b>Moderna Therapeutics:</b> Emily Eickhoff</li>
+				<li><b>Pegasystems, Inc.:</b> Emma Levitt</li>
+				<li><b>Ramirez &amp; Co.:</b> Alana Lustenberger</li>
+				<li><b>Rapid7:</b> Ashley Hedberg</li>
+				<li><b>Silk Therapeutic, Inc.:</b> Lauren Savage</li>
+				<li><b>Volpe National Transportation Systems Center:</b> Emma Levitt</li>
+			</ul>
+			
 			<iframe src="https://docs.google.com/forms/d/19f2qC_iIpZcV8c3v-CffyxKPfpdhj2_xu1QGDRe_us0/viewform?embedded=true#start=embed">Loading...</iframe>
 		</script>
 		<!-- contact template -->
