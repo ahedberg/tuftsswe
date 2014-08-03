@@ -34,3 +34,25 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Aptana file
+$.metadata/
+.project
+*.lock
+*.log
+*.version
+*.index
+*.tree
+*.jpg
+*.png
+*.prefs
+*.xmi
+*.xml
+*.properties
+*.dat
+*.resources
+.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+.metadata/.plugins/org.eclipse.jdt.core/invalidArchivesCache
+.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+*.ini
