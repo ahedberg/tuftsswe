@@ -13,7 +13,9 @@ App.Board = DS.Model.extend({
 
 App.Meeting = DS.Model.extend({
 	topics: DS.hasMany('topic'),
-	date: DS.attr('date')
+	month: DS.attr('string'),
+	day: DS.attr('int'),
+	year: DS.attr('int')
 });
 
 App.Topic = DS.Model.extend({

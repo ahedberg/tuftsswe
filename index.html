@@ -34,11 +34,10 @@
 								<li>{{#link-to 'board'}}Board Members{{/link-to}}</li>
 								<li>{{#link-to 'calendar'}}Calendar{{/link-to}}</li>
 								<!-- TODO add these -->
-								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Meeting Minutes <span class="caret"></span></a>
+								<!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Meeting Minutes <span class="caret"></span></a>
 									<ul class="dropdown-menu">
-									<!-- TODO -->
 									</ul>
-								</li>
+								</li>-->
 								<li>{{#link-to 'corporate-relations'}}Corporate Relations{{/link-to}}</li>
 								<li>{{#link-to 'contact'}}Contact SWE Tufts{{/link-to}}</li>
 						</nav>
@@ -46,9 +45,16 @@
 				</div>
 				<div class="row">
 					<div class="col-md-12 panel">
-						<section>
-							{{outlet}}
-						</section>
+						{{outlet}}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 panel local-footer">
+						<img src="static/footer/engineering.jpg" class="local-footer" alt="Tufts Engineering" /> &nbsp;
+						<img src="static/footer/swe.png" class="local-footer" alt="SWE" /> &nbsp;
+						<img src="static/footer/tufts.gif" class="local-footer" alt="Tufts University" />
+						<br />
+						<p><i>Aspire - Advance - Achieve</i></p>
 					</div>
 				</div>
 			</div>
@@ -164,7 +170,11 @@
 			<h1>Event Calendar</h1>
 			<iframe src="https://www.google.com/calendar/embed?src=swetufts%40gmail.com&ctz=America/New_York"></iframe>
 		</script>
-		<!-- corporate relations template TODO add companies we've worked at -->
+		<!-- meeting minutes template -->
+		<script type="text/x-handlebars" data-template-name="minutes">
+			
+		</script>
+		<!-- corporate relations template -->
 		<script type="text/x-handlebars" data-template-name="corporate-relations">
 			<h1>Corporate Relations</h1>
 			<p>Tufts SWE members have interned at a variety of companies both in the greater Boston area and around the country. A selection
@@ -219,5 +229,6 @@
 		<script src="js/router.js"></script>
 		<script src="js/models.js"></script>
 		<script src="js/fixtures/board.js"></script>
+		<script src="js/fixtures/minutes.js"></script>
 	</body>
 </html>

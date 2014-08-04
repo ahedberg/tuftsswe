@@ -15,6 +15,14 @@ iframe {
 	width: 100%;
 }
 
+img.local-footer {
+	max-height: 50px;
+}
+
+.local-footer {
+	text-align: right;
+}
+
 .local-container {
 	margin: 1%;
 }
