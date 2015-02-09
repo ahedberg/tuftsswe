@@ -162,7 +162,7 @@ App.Board.FIXTURES = [
 		email: "daniella.dipaola@tufts.edu",
 		year: 2016,
 		position: "Outreach Coordinator",
-		imageUrl: "static/board/dipaola.jpg",
+		imageUrl: "static/board/blank-profile.jpg",
 		major: "Engineering Psychology",
 		secondMajor: "",
 		minor: "Engineering Education",
